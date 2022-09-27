@@ -6,9 +6,9 @@ function Nav() {
   return (
     <Logo to={"/"}>
       <img
-        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-app-icon-food-explorer-design-template-8ae900e41ccbc0a2e1b48a85d239e389_screen.jpg?ts=1585237320"
+        src="https://seeklogo.com/images/F/food-logo-59E5A73AFD-seeklogo.com.png"
         alt=""
-        style={{ width: "7rem" }}
+        style={{ width: "10rem", marginTop: "0.5rem" }}
       />
     </Logo>
   );

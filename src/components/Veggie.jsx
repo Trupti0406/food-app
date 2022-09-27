@@ -23,8 +23,8 @@ function Veggie() {
       const data = await api.json();
       localStorage.setItem("veggie", JSON.stringify(data.recipes));
       setVeggie(data.recipes);
-      console.log(data.recipes);
-      console.log("HEllo");
+      // console.log(data.recipes);
+      // console.log("HEllo");
     }
   };
 
@@ -34,7 +34,7 @@ function Veggie() {
         <h3>Vegitarian Specials:</h3>
         <Splide
           options={{
-            perPage: 6,
+            perPage: 4,
             arrows: false,
             pagination: false,
             drag: "free",
