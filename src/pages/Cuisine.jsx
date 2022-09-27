@@ -10,7 +10,7 @@ function Cuisine() {
 
   const getCuisine = async (name) => {
     const data = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_MY_API}&cuisine=${name}&number=12`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_MY_API}&cuisine=${name}&number=15`
     );
     const recipes = await data.json();
     setCuisine(recipes.results);

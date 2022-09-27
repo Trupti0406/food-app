@@ -29,10 +29,22 @@ function Popular() {
   return (
     <div>
       <Wrapper>
-        <h3>Popular Pics:</h3>
+        <h3>Popular In Menu:</h3>
         <Splide
           options={{
             perPage: 4,
+            breakpoints: {
+              912: {
+                perPage: 3,
+              },
+              700: {
+                perPage: 2,
+              },
+              480: {
+                perPage: 1,
+                arrows: true,
+              },
+            },
             arrows: false,
             pagination: false,
             drag: "free",
@@ -63,12 +75,12 @@ const Wrapper = styled.div`
 
 const Card = styled.div`
   min-height: 18rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   overflow: hidden;
   position: relative;
 
   img {
-    border-radius: 2rem;
+    border-radius: 1rem;
     position: absolute;
     left: 0;
     width: 100%;
@@ -91,6 +103,7 @@ const Card = styled.div`
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+    padding: 0rem 0.3rem;
   }
 `;
 export default Popular;

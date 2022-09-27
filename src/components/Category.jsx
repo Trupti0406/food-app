@@ -18,7 +18,7 @@ function Category() {
       </CuisineLink>
       <CuisineLink to={"/cuisine/Thai"}>
         <GiNoodles />
-        <h4>Thai Food</h4>
+        <h4>Thai</h4>
       </CuisineLink>
       <CuisineLink to={"/cuisine/Chinese"}>
         <GiChopsticks />
@@ -30,8 +30,8 @@ function Category() {
 
 const List = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin: 2rem 0rem;
+  justify-content: space-between;
+  margin: 1rem 0rem;
 `;
 
 const CuisineLink = styled(NavLink)`
