@@ -1,3 +1,17 @@
+# Food Explorer App
+
+### Live Demo: https://food-explorer-e15b5.web.app/
+
+## Description
+1) Food Explorer app using ReactJs.
+2) Features: Home page,search feature, cuisine categories, recipe page with Instructions and Ingredients of selected dish.
+3) Tech used: Javascript(Base), ReactJs, HTML, CSS, styled components, react router, Spoonacular API, Firebase for deployment
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
