@@ -25,20 +25,26 @@ function Recipe() {
         <img src={details.image} alt={details.title} />
       </div>
       <Info>
-        <div className="btn" style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
-
-        <Button
-          className={activeTab === "instructions" ? "active" : ""}
-          onClick={() => setActiveTab("instructions")}
+        <div
+          className="btn"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          Instructions
-        </Button>
-        <Button
-          className={activeTab === "ingredient" ? "active" : ""}
-          onClick={() => setActiveTab("ingredient")}
-        >
-          Ingredients
-        </Button>
+          <Button
+            className={activeTab === "instructions" ? "active" : ""}
+            onClick={() => setActiveTab("instructions")}
+          >
+            Instructions
+          </Button>
+          <Button
+            className={activeTab === "ingredient" ? "active" : ""}
+            onClick={() => setActiveTab("ingredient")}
+          >
+            Ingredients
+          </Button>
         </div>
         {activeTab === "instructions" && (
           <div>
@@ -52,15 +58,14 @@ function Recipe() {
 
         {activeTab === "ingredient" && (
           <div>
-<h2>Ingredients required to make  "{details.title
-}":</h2>
-          <ul>
-            {details.extendedIngredients.map((ingredient) => (
-              <li key={ingredient.id}>
-                <h4>{ingredient.original}</h4>
-              </li>
-            ))}
-          </ul>
+            <h2>Ingredients required to make "{details.title}":</h2>
+            <ul>
+              {details.extendedIngredients.map((ingredient) => (
+                <li key={ingredient.id}>
+                  <h4>{ingredient.original}</h4>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </Info>
@@ -68,7 +73,7 @@ function Recipe() {
   );
 }
 const DetailWrapper = styled.div`
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
   display: flex;
 
@@ -81,10 +86,10 @@ const DetailWrapper = styled.div`
     margin: 1.5rem 0rem;
   }
   img {
-    height: 18rem;
+    height: 15rem;
   }
   li {
-    font-size: 1rem
+    font-size: 1rem;
   }
   ul {
     margin-top: 2rem;
@@ -93,8 +98,8 @@ const DetailWrapper = styled.div`
   }
   @media (max-width: 900px) {
     flex-direction: column;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     img {
       height: 12rem;
     }
@@ -110,9 +115,10 @@ const Button = styled.button`
   margin-top: 4.7rem;
   font-weight: 600;
   font-size: 1rem;
+  cursor: pointer;
   @media (max-width: 900px) {
-    margin-right:1rem;
-    margin-top:2rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
     padding: 1rem 1rem;
   }
 `;
@@ -120,7 +126,7 @@ const Button = styled.button`
 const Info = styled.div`
   margin-left: 4rem;
   @media (max-width: 900px) {
-    margin-left:1.5rem;
+    margin-left: 1.5rem;
   }
 `;
 
