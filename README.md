@@ -5,7 +5,7 @@
 ## Description
 1) Food Explorer app using ReactJs.
 2) Features: Home page,search feature, cuisine categories, recipe page with Instructions and Ingredients of selected dish.
-3) Tech used: Javascript(Base), ReactJs, HTML, CSS, styled components, react router, Spoonacular API, Firebase for deployment
+3) Tech used: Javascript(Base), ReactJs, HTML, CSS, styled components, react router, Spoonacular API, Firebase for deployment.
 
 
 
