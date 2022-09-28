@@ -25,6 +25,8 @@ function Recipe() {
         <img src={details.image} alt={details.title} />
       </div>
       <Info>
+        <div className="btn" style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+
         <Button
           className={activeTab === "instructions" ? "active" : ""}
           onClick={() => setActiveTab("instructions")}
@@ -37,13 +39,9 @@ function Recipe() {
         >
           Ingredients
         </Button>
+        </div>
         {activeTab === "instructions" && (
           <div>
-            <h2>Summary:</h2>
-            <h4
-              className="summary"
-              dangerouslySetInnerHTML={{ __html: details.summary }}
-            ></h4>
             <h2>Instructions:</h2>
             <h4
               className="instructions"
@@ -53,6 +51,9 @@ function Recipe() {
         )}
 
         {activeTab === "ingredient" && (
+          <div>
+<h2>Ingredients required to make  "{details.title
+}":</h2>
           <ul>
             {details.extendedIngredients.map((ingredient) => (
               <li key={ingredient.id}>
@@ -60,6 +61,7 @@ function Recipe() {
               </li>
             ))}
           </ul>
+          </div>
         )}
       </Info>
     </DetailWrapper>
@@ -82,20 +84,19 @@ const DetailWrapper = styled.div`
     height: 18rem;
   }
   li {
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size: 1rem
   }
   ul {
     margin-top: 2rem;
-  }
-  .summary {
   }
   .instructions {
   }
   @media (max-width: 900px) {
     flex-direction: column;
+    align-items:center;
+    justify-content:center;
     img {
-      height: 15rem;
+      height: 12rem;
     }
   }
 `;
@@ -110,12 +111,17 @@ const Button = styled.button`
   font-weight: 600;
   font-size: 1rem;
   @media (max-width: 900px) {
-    display:flex;
-    flex-direction:column;
+    margin-right:1rem;
+    margin-top:2rem;
+    padding: 1rem 1rem;
   }
 `;
 
 const Info = styled.div`
-  margin-left: 5rem;
+  margin-left: 4rem;
+  @media (max-width: 900px) {
+    margin-left:1.5rem;
+  }
 `;
+
 export default Recipe;
